@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Footer.css';
 
 const Footer: React.FC = () => {
     return (
@@ -9,7 +10,7 @@ const Footer: React.FC = () => {
                 <Row>
                     <Col>
                         <h2>About Us</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>This is a generic React website template with footer and header etc. </p>
                     </Col>
                     <Col>
                         <h2>Contact Us</h2>

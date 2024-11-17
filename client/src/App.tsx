@@ -1,22 +1,15 @@
-import { useState } from 'react'
 import './App.css'
+import Header from './components/Header/Header.tsx'
 import Footer from './components/Footer/Footer.tsx'
+import CountButton from './components/Counter/CountButton.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>Spaghetti</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-
+    <Header />
+      <h1>React App Demo</h1>
+       <CountButton />
       <Footer />
     </>
   )
