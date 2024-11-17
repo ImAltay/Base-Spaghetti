@@ -1,0 +1,23 @@
+/* Footer container */
+footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer text */
+.footer-text {
+  color: #888;
+  font-size: 14px;
+}
+
+/* Footer link */
+.footer-link {
+  color: #555;
+  text-decoration: none;
+}
+
+/* Footer link hover effect */
+.footer-link:hover {
+  text-decoration: underline;
+}
