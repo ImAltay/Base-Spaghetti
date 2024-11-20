@@ -1,12 +1,18 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import mongoose from 'mongoose';
 import app from './app.js';
 
 const port = process.env.PORT || 3000;
 
 const startServer = async () => {
   try {
-    // TODO add connection to database
+    // Connect to MongoDB
+    const uri = process.env.MONGODB_URI;
+    await mongoose.connect(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
     });
