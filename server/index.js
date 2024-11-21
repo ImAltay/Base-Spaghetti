@@ -5,6 +5,9 @@ import app from './app.js';
 
 const port = process.env.PORT || 3000;
 
+// Load environment variables
+dotenv.config();
+
 const startServer = async () => {
   try {
     // Connect to MongoDB
@@ -13,6 +16,7 @@ const startServer = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
+    console.log('Connected to MongoDB');
     app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
     });
