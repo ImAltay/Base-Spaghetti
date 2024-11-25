@@ -10,7 +10,7 @@ export const getUsers = async (req, res) => {
 };
 
 export const createUser = async (req, res) => {
-  const user = new User({ name: 'Gintoki' });
+  const user = new User(req.body);
   try {
     await user.save();
     res.status(201).json(user);

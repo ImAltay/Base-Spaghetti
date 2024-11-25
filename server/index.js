@@ -12,10 +12,7 @@ const startServer = async () => {
   try {
     // Connect to MongoDB
     const uri = process.env.MONGODB_URI;
-    await mongoose.connect(uri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(uri);
     console.log('Connected to MongoDB');
     app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
