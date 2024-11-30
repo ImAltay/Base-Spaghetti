@@ -17,10 +17,13 @@ export const getUsers = async (req, res) => {
 };
 
 export const createUser = async (req, res) => {
-  const user = new User(req.body);
+  const { username, password, role } = req.body;
   try {
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const user = new User({ username, password: hashedPassword, role });
     await user.save();
-    res.status(201).json(user);
+    const token = generateToken(user);
+    res.status(201).json({ user, token });
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
