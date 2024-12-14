@@ -1,11 +1,12 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Header.css';
 
 const Header: React.FC = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
-      <Container>
+      <Container >
         <Navbar.Brand href="#home">React App</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

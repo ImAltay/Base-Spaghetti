@@ -8,8 +8,10 @@ function App() {
   return (
     <>
     <Header />
+      <div className='content'>
       <h1>React App Demo</h1>
        <CountButton />
+      </div>
       <Footer />
     </>
   )
